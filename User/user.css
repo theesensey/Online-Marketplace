@@ -1,0 +1,284 @@
+/* Sets default styles for the entire body */
+body {
+    margin: 0;
+    font-family: "Lato", sans-serif;
+}
+
+/* Styles the sidebar */
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #ccc;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+/* Styles the links within the sidebar */
+.sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+}
+
+/* Styles the active link within the sidebar */
+.sidebar a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+/* Styles the non-active links within the sidebar on hover */
+.sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+/* Styles the content area */
+div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+
+}
+
+/* Styles the heading within the content area */
+.content h1 {
+    font-size: 36px;
+    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styles the paragraphs within the content area */
+.content p {
+    font-size: 18px;
+    line-height: 1.5;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styles the search box */
+.search-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Styles the label within the search box */
+.search-box label {
+    margin-right: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Styles the select within the search box */
+.search-box select {
+    margin-right: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    display: block;
+    padding: 10px;
+    width: 250px;
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+/* Styles the button within the search box */
+.search-box button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: auto;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect on button */
+.search-box button:hover {
+    background-color: #0e8a5d;
+}
+
+/* Media query that adjusts styles when the screen is 768px or smaller */
+@media screen and (max-width: 768px) {
+
+    /* Adjusts the styles of the sidebar */
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    /* Adjusts the margin of the content area */
+    .content {
+        margin-left: 0;
+    }
+
+    /* Adjusts the styles of the search box */
+    .search-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Adjusts the margins of the label, select, and button within the search box */
+    .search-box label,
+    .search-box select,
+    .search-box button {
+        margin: 5px;
+    }
+}
+
+/* Media query that adjusts styles when the screen is 400px or smaller */
+@media screen and (max-width: 400px) {
+
+    /* Adjusts the styles of the links within the sidebar */
+    .sidebar a {
+        text-align: center;
+        float: none;
+    }
+}
+
+/* Styles the form container */
+.form-container {
+    margin: 50px auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+}
+
+/* Styles the form labels */
+.form-label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Styles the form input fields  */
+.form-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    /* prevents width overflow due to padding */
+}
+
+/* Styles the form select fields  */
+.form-input select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    /* prevents width overflow due to padding */
+}
+
+/* Styles the form button */
+.form-button {
+    display: inline-block;
+    background-color: #04AA6D;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* Styles the form button on hover */
+.form-button:hover {
+    background-color: #0c7e52;
+}
+
+/* Styles the form control group */
+.form-control {
+    text-align: center;
+}
+
+/* Styles the error message */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Styles the form button on hover */
+.form-button:hover {
+    background-color: #0c7e52;
+}
+
+.table-container {
+    margin-top: -100px;
+    display: flex;
+    /* add this property to make the table container a flex container */
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    /* set the height of the table container to whatever you need */
+    overflow-y:auto
+}
+
+td.photo {
+    width: 100px;
+    /* set the width of the photo cell */
+    padding: 5px;
+    /* add some padding to the cell */
+    text-align: center;
+    /* center the photo within the cell */
+}
+
+td.photo img {
+    max-width: 100%;
+    /* set the max width of the photo to 100% of its parent cell */
+    max-height: 100px;
+    /* set the max height of the photo */
+}
+.status:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    overflow-y:auto
+}
+
+.table th {
+    background-color: #04AA6D;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+.table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table tr:hover {
+    background-color: #ddd;
+}
+
